@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия Шишлова](https://up.htmlacademy.ru/adaptive/10/user/226263).
-* Наставник: `Неизвестно`.
+* Наставник: [Игорь Дерябин](https://up.htmlacademy.ru/adaptive/10/user/212247).
 
 ---
 
