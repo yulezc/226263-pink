@@ -2,12 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+
     <title>Пинк: Главная</title>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo"><a href="#"><img src="http://placehold.it/75x22"></a></div>
+        <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
         <nav class="main-nav  main-nav--closed">
           <button class="main-nav__btn-open" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
@@ -20,17 +22,15 @@
           </div>
         </nav>
       </div>
-      <div class="page-title">
-        <img src="http://placehold.it/320x462">
-      </div>
+      <div class="page-title--index"></div>
     </header>
 
     <section class="download">
       <a class="download__btn" type="button" href="#">Скачать приложение</a>
       <ul class="download__items">
-        <li class="download__item  download__item--apple"><a href="#"><img src="#" alt="apple"></a></li>
-        <li class="download__item  download__item--android"><a href="#"><img src="#" alt="android"></a></li>
-        <li class="download__item  download__item--windows"><a href="#"><img src="#" alt="windows-phone"></a></li>
+        <li class="download__item  download__item--apple"><a href="#"><img src="img/logo-apple.svg" alt="apple"></a></li>
+        <li class="download__item  download__item--android"><a href="#"><img src="img/logo-android.svg" alt="android"></a></li>
+        <li class="download__item  download__item--windows"><a href="#"><img src="img/logo-microsoft.svg" alt="windows-phone"></a></li>
       </ul>
       <p>
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -64,7 +64,6 @@
               </p>
             </li>
           </ul>
-          <img src="http://placehold.it/157x277">
         </div>
       </section>
 
@@ -112,7 +111,7 @@
           <div class="price__table">
             <table>
               <tr><th>База</th></tr>
-              <tr><td>1,99 USD</td></tr>
+              <tr><th class="price__cost">1,99 USD</th></tr>
               <tr><td>Розовый фильтр</td></tr>
               <tr><td>Смайлики</td></tr>
               <tr><td>Комментарии</td></tr>
@@ -121,7 +120,7 @@
           <div class="price__table">
             <table>
               <tr><th>Стандарт</th></tr>
-              <tr><td>3,99 USD</td></tr>
+              <tr><th class="price__cost">3,99 USD</th></tr>
               <tr><td>Розовый фильтр</td></tr>
               <tr><td>Смайлики</td></tr>
               <tr><td>Комментарии</td></tr>
@@ -130,7 +129,7 @@
           <div class="price__table">
             <table>
               <tr><th>Анлим</th></tr>
-              <tr><td>9,99 USD</td></tr>
+              <tr><th class="price__cost">9,99 USD</th></tr>
               <tr><td>Розовый фильтр</td></tr>
               <tr><td>Смайлики</td></tr>
               <tr><td>Комментарии</td></tr>
@@ -145,7 +144,7 @@
       </section>
     </article>
 
-    <footer class="page-footer  page-footer--index">
+    <footer class="page-footer--index">
     <div class="page-footer__wrapper">
       <p class="page-footer__title">Остались вопросы?<br>Свяжитесь с нами!</p>
       <p class="page-footer__contacts">
@@ -161,7 +160,7 @@
         <span>ул. Б. Конюшенная, д. 19/8</span>
       </p>
       </div>
-      <div class="map"><img src="http://placehold.it/320x200"></div>
+      <div class="map"></div>
     </footer>
   </body>
 </html>
