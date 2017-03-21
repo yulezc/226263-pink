@@ -2,18 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <title>Пинк: Фото </title>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
-        <nav class="main-nav  main-nav--closed">
-          <button class="main-nav__btn-open" type="button">Открыть меню</button>
+        <nav class="main-nav  main-nav--opened">
+          <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
+          <button class="main-nav__btn" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
-              <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
+              <li class="main-nav__item"><a>Главная</a></li>
               <li class="main-nav__item"><a href="#">Фотографии</a></li>
               <li class="main-nav__item"><a href="#">Конкурс</a></li>
               <li class="main-nav__item"><a href="#">HTML academy</a></li>
@@ -134,21 +136,25 @@
 
       <section class="new-photo">
         <h3>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h3>
-        <div class="new-photo__filter">
-          <img src="img/photo-7-mobile@1x.jpg" alt="new-photo" width="280" height="375">
-          <div class="new-photo__filter-list">
-            <img src="img/icon-editor-crop.svg">
-            <img src="img/icon-editor-fill.svg">
-            <img src="img/icon-editor-contrast.svg">
+        <div class="new-photo__wrapper">
+          <div class="new-photo__photo">
+            <img src="img/photo-7-mobile@1x.jpg" alt="new-photo" width="280" height="375">
           </div>
-          <div class="new-photo__range-controls">
-            <div class="new-photo__scale"></div>
-            <div class="new-photo__toggle"></div>
+          <div class="new-photo__filter">
+            <div class="new-photo__filter-list">
+              <img src="img/icon-editor-crop.svg">
+              <img src="img/icon-editor-fill.svg">
+              <img src="img/icon-editor-contrast.svg">
+            </div>
+            <div class="new-photo__range-controls">
+              <div class="new-photo__scale"></div>
+              <div class="new-photo__toggle"></div>
+            </div>
+            <div class="new-photo__command">
+              <button class="new-photo__btn  new-photo__btn--post" type="button">Запостить</button>
+              <button class="new-photo__btn  new-photo__btn--cancel">Отмена</button>
+            </div>
           </div>
-        </div>
-        <div class="new-photo__command">
-          <button class="new-photo__btn  new-photo__btn--post" type="button">Запостить</button>
-          <button class="new-photo__btn  new-photo__btn--cancel">Отмена</button>
         </div>
       </section>
     </main>

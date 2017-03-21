@@ -1,15 +1,147 @@
 .main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  min-height: 66px;
   background-color: @color-blue;
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
 }
 
+.main-nav__wrapper {
+  .container();
+}
+
+.main-nav__items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-nav__wrapper,
+.main-nav__items,
 .main-nav__item {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.main-nav__item {
+  width: auto;
+  min-height: 64px;
+  list-style: none;
+  text-align: center;
   a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
+  }
+}
+
+.main-nav__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 90px;
+  height: 66px;
+  font-size: 0;
+  background-color: @color-blue;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__btn::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff,
+              0 16px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__btn:hover::before {
+  background-color: @color-pink;
+  box-shadow: 0 8px 0 0 @color-pink,
+              0 16px 0 0 @color-pink;
+}
+
+.main-nav--closed .main-nav__btn:active::before {
+  background-color: rgba(210, 40, 86, 0.3);
+  box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3),
+              0 16px 0 0 rgba(210, 40, 86, 0.3);
+}
+
+.main-nav--opened .main-nav__btn {
+  top: 0;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 21px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media @tablet-widths {
+  .main-nav {
+    width: auto;
+    height: 110px;
+    margin: 0;
+  }
+  .main-nav__items {
+    height: 256px;
+  }
+  .main-nav__item {
+
+    width: auto;
+    text-align: center;
+    background-color: @color-blue;
+  }
+}
+
+@media @desktop-widths {
+  .main-nav {
+    flex-wrap: nowrap;
+    height: 110px;
+    background-color: rgba(29, 39, 50, 0.3);
+  }
+  .main-nav__items {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 110px;
+  }
+  .main-nav__item {
+    width: 197px;
+    background-color: transparent;
+    height: 110px;
+  }
+  .main-nav__btn {
+    display: none;
   }
 }

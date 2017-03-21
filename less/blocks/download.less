@@ -1,15 +1,68 @@
 .download {
-  padding: 20px;
+  .container();
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: @color-blue;
   color: #ffffff;
-  &__btn {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    text-decoration: none;
-    color: #ffffff;
+  p {
+  width: 260px;
+  margin: 0 auto;
+  }
+  h2 {
+    display: none;
   }
 }
 .download__item {
   list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.download__btn {
+  display: block;
+  width: 205px;
+  padding: 10px 35px;
+  background-color: @color-blue;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.download__items {
+  width: 260px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+@media @tablet-widths {
+  .download {
+    width: 340px;
+    min-height: 390px;
+    margin-top: -440px;
+    margin-left: ;
+    background-color: transparent;
+    h2 {
+      display: block;
+      font-weight: 300;
+    }
+  }
+}
+
+@media @desktop-widths {
+    .download {
+    width: 340px;
+    min-height: 540px;
+    margin-top: -630px;
+    margin-left: ;
+    background-color: transparent;
+    h2 {
+      display: block;
+      font-weight: 300;
+    }
+  }
 }

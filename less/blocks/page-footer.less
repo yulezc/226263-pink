@@ -9,6 +9,22 @@
     text-decoration: none;
   }
 }
+
+.page-footer__wrapper {
+  .container();
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-links,
+.social-link {
+  padding: 0;
+  margin: 0;
+}
+
 .page-footer__title {
   font-weight: 300;
   font-size: 24px;
@@ -17,4 +33,56 @@
 
 .social-links li {
   list-style: none;
+}
+
+.page-footer__contacts {
+  width: 245px;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  display: block;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media @tablet-widths {
+  .page-footer__wrapper {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-between;
+  }
+  .page-footer--index .page-footer__wrapper {
+    flex-wrap: wrap;
+  }
+  .page-footer__title {
+    font-size: 40px;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer--index .page-footer__wrapper {
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .page-footer__title {
+    font-size: 50px;
+    margin: 45px 200px;
+  }
 }

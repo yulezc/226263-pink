@@ -1,7 +1,42 @@
+.gallery {
+  .container();
+}
+
 .gallery h2 {
   line-height: 30px;
 }
 
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery__list,
+.gallery__item {
+  padding: 0;
+  margin: 0;
+}
 .gallery__item {
   list-style: none;
+  margin-bottom: 20px;
+}
+
+.gallery__photo--best img {
+  width: 100%;
+}
+
+@media @tablet-widths {
+
+  .gallery__item:not(:first-child) {
+    width: 300px;
+  }
+  .gallery__photo--best img {
+    height: 510px;
+    width: 100%;
+  }
+}
+
+@media @desktop-widths {
+
 }

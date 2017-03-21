@@ -1,6 +1,37 @@
 .new-photo {
+  .container();
+  h3 {
+    margin: 0 auto;
+  }
+}
+
+.new-photo__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: @color-grey;
 }
+
+.new-photo__photo {
+  width: 280px;
+}
+
+.new-photo__filter {
+  width: 280px;
+  height: 310px;
+}
+
+.new-photo__filter-list {
+  display: flex;
+  justify-content: space-around;
+}
+
 .new-photo__btn {
   color: @color-pink;
+}
+
+@media @tablet-widths {
+  .new-photo__filter {
+
+  }
 }

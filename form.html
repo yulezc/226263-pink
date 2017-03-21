@@ -2,18 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <title>Пинк: Конкурс</title>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
-        <nav class="main-nav  main-nav--closed">
-          <button class="main-nav__btn-open" type="button">Открыть меню</button>
+        <nav class="main-nav  main-nav--opened">
+          <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
+          <button class="main-nav__btn" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
-              <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
+              <li class="main-nav__item"><a>Главная</a></li>
               <li class="main-nav__item"><a href="#">Фотографии</a></li>
               <li class="main-nav__item"><a href="#">Конкурс</a></li>
               <li class="main-nav__item"><a href="#">HTML academy</a></li>
@@ -44,8 +46,8 @@
           </div>
         </div>
 
-        <div class="form-field__list">
-          <h3 class="form-field__title">ваши безбашенные достижения в путешествии</h3>
+        <fieldset class="form-field__list">
+          <legend class="form-field__title">ваши безбашенные достижения в путешествии</legend>
           <div class="form-field__check">
             <input type="checkbox" value="check-1" name="check-1" id="check-1" checked>
             <label for="check-1">Сделал селфи с акулой</label>
@@ -70,8 +72,9 @@
             <input type="checkbox" value="6" name="check-6" id="check-6">
             <label for="check-6">Разгромил отель</label>
           </div>
-        </div>
-        <div class="form-field__user-items">
+        </fieldset>
+        <fieldset class="form-field__user-items">
+        <legend>Контактная информация</legend>
           <div class="form-field__user-item">
             <label for="phone">номер телефона</label><br>
             <input type="tel" name="tel" id="phone" placeholder="Номер, пожалуйста">
@@ -80,10 +83,10 @@
             <label for="email">адрес почты</label><br>
             <input type="email" name="email" id="email" placeholder="Введите почту*" required>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="form-field__list">
-          <h3 class="form-field__title">С каким приложением путешествовали?</h3>
+        <fieldset class="form-field__list">
+          <legend class="form-field__title">С каким приложением путешествовали?</legend>
           <div class="form-field__check">
             <input type="radio" value="radio-1" name="radio" id="radio-1" checked>
             <label for="radio-1">Pink для iOS</label>
@@ -96,13 +99,13 @@
             <input type="radio" value="radio-3" name="radio" id="radio-3">
             <label for="radio-3">Windows Phone</label>
           </div>
-        </div>
-        <div class="form-field__message">
-          <h3 class="form-field__title">Опишите свои эмоции</h3>
+        </fieldset>
+        <fieldset class="form-field__message">
+          <legend class="form-field__title">Опишите свои эмоции</legend>
           <textarea name="text" rows="5" id="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           <input class="form-field__bnt  btn" type="submit" value="Отправить форму">
           <p class="form-field__legend"><sup>*</sup> — обязательные поля</p>
-        </div>
+        </fieldset>
       </form>
     </article>
 
