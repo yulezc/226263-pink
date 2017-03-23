@@ -11,14 +11,16 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="main-nav  main-nav--opened">
-          <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
-          <button class="main-nav__btn" type="button">Открыть меню</button>
+          <div class="page-header__menu">
+            <div class="page-header__logo"><a href="#"><img src="img/logo-pink-white-mobile.svg"></a></div>
+            <button class="main-nav__btn-open" type="button">Открыть меню</button>
+          </div>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
               <li class="main-nav__item"><a>Главная</a></li>
-              <li class="main-nav__item"><a href="#">Фотографии</a></li>
-              <li class="main-nav__item"><a href="#">Конкурс</a></li>
-              <li class="main-nav__item"><a href="#">HTML academy</a></li>
+              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+              <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
             </ul>
           </div>
         </nav>
@@ -27,18 +29,19 @@
     </header>
 
     <section class="download">
-      <h2>Взгляните на жизнь иначе!</h2>
-      <a class="download__btn" type="button" href="#">Скачать приложение</a>
-      <ul class="download__items">
-        <li class="download__item  download__item--apple"><a href="#"><img src="img/logo-apple.svg" alt="apple"></a></li>
-        <li class="download__item  download__item--android"><a href="#"><img src="img/logo-android.svg" alt="android"></a></li>
-        <li class="download__item  download__item--windows"><a href="#"><img src="img/logo-microsoft.svg" alt="windows-phone"></a></li>
-      </ul>
-      <p>
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
+      <div class="download__wrapper">
+        <h2>Взгляните на жизнь иначе!</h2>
+        <a class="download__btn" type="button" href="http://www.apple.com/ru/itunes/">Скачать приложение</a>
+        <ul class="download__items">
+          <li class="download__item  download__item--apple"><a href="#"><img src="img/logo-apple.svg" alt="apple"></a></li>
+          <li class="download__item  download__item--android"><a href="https://play.google.com/store"><img src="img/logo-android.svg" alt="android"></a></li>
+          <li class="download__item  download__item--windows"><a href="https://www.microsoft.com/en-us/store/apps"><img src="img/logo-microsoft.svg" alt="windows-phone"></a></li>
+        </ul>
+        <p>
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </div>
     </section>
-
     <article>
       <header class="caption">
         <h2>Устали от серости мегаполиса?<br>
@@ -47,24 +50,28 @@
       <section class="advantages">
         <div class="advantages__wrapper">
           <ul class="advantages__items">
+
             <li class="advantages__item">
               <h3 class="advantages__item-title">Поднимает настроение</h3>
               <p>
-                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+                laquoПриложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
               </p>
             </li>
+
             <li class="advantages__item">
               <h3 class="advantages__item-title">Меняет мир вокруг</h3>
               <p>
                 Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
               </p>
             </li>
+
             <li class="advantages__item">
               <h3 class="advantages__item-title">Заводит новых друзей</h3>
               <p>
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
               </p>
             </li>
+
           </ul>
         </div>
       </section>
@@ -81,24 +88,27 @@
           <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
           <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-2">
           <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-3">
-
           <ul class="reviews__items">
+
             <li class="reviews__item">
-              <h3 class="reviews__item-title">Николай Петров</h3>
+              <p class="reviews__item-name">Николай Петров</p>
+              <p class="reviews__item-age">25 лет, водитель трамвая</p>
               <blockquote>
-                Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
             </li>
 
             <li class="reviews__item">
-              <h3 class="reviews__item-title"></h3>
+              <p class="reviews__item-name"></p>
+              <p class="reviews__item-age"></p>
               <blockquote>
 
               </blockquote>
             </li>
 
             <li class="reviews__item">
-              <h3 class="reviews__item-title"></h3>
+              <p class="reviews__item-name"></p>
+              <p class="reviews__item-age"></p>
               <blockquote>
 
               </blockquote>
@@ -117,31 +127,43 @@
           <input class="price-slider__input" type="radio" name="price" id="price-input-1">
           <input class="price-slider__input" type="radio" name="price" id="price-input-2" checked>
           <input class="price-slider__input" type="radio" name="price" id="price-input-3">
+
           <div class="price__table">
             <table>
-              <tr><th>База</th></tr>
-              <tr><td class="price__cost">1,99 USD</td></tr>
-              <tr><td>Розовый фильтр</td></tr>
-              <tr><td>Смайлики</td></tr>
-              <tr><td>Комментарии</td></tr>
-            </table>
-          </div>
-          <div class="price__table">
-            <table>
-              <tr><th>Стандарт</th></tr>
-              <tr><td class="price__cost">3,99 USD</td></tr>
-              <tr><td>Розовый фильтр</td></tr>
-              <tr><td>Смайлики</td></tr>
-              <tr><td>Комментарии</td></tr>
-            </table>
-          </div>
-          <div class="price__table">
-            <table>
-              <tr><th>Анлим</th></tr>
-              <tr><td class="price__cost">9,99 USD</td></tr>
-              <tr><td>Розовый фильтр</td></tr>
-              <tr><td>Смайлики</td></tr>
-              <tr><td>Комментарии</td></tr>
+              <tr>
+                <th class="price__column-0"></th>
+                <th class="price__column-1">
+                  <span>База</span>
+                  <span class="price__cost">1,99 USD</span>
+                </th>
+                <th class="price__column-2">
+                  <span>Стандарт</span>
+                  <span class="price__cost">3,99 USD</span>
+                </th>
+                <th class="price__column-3">
+                  <span>Анлим</span>
+                  <span class="price__cost">9,99 USD</span>
+                </th>
+              </tr>
+
+              <tr>
+                <td class="price__column-0">Розовый фильтр</td>
+                <td class="price__column-1  price__row">Розовый фильтр</td>
+                <td class="price__column-2  price__row">Розовый фильтр</td>
+                <td class="price__column-3  price__row">Розовый фильтр</td>
+              </tr>
+                <tr>
+                <td class="price__column-0">Смайлики</td>
+                <td class="price__column-1  price__row">Смайлики</td>
+                <td class="price__column-2  price__row">Смайлики</td>
+                <td class="price__column-3  price__row">Смайлики</td>
+              </tr>
+              <tr>
+                <td class="price__column-0">Комментарии</td>
+                <td class="price__column-1  price__row">Комментарии</td>
+                <td class="price__column-2  price__row">Комментарии</td>
+                <td class="price__column-3  price__row">Комментарии</td>
+              </tr>
             </table>
           </div>
           <div class="price__toggles  price-slider__toggles">
@@ -171,5 +193,7 @@
       </div>
       <div class="map"></div>
     </footer>
+
   </body>
 </html>
+

@@ -3,22 +3,172 @@
   font-size: 18px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
+  h2 {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  legend {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+  }
 }
 
-.form-field__user-items,
-.form-field__list {
+.form-field__wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
+
+.form-field__bnt {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 17px 53px;
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 2px;
+}
+
+.form-field__hidden,
 .form-field__title,
 .form-field__user-item label {
+  font-size: 14px;
+  line-height: 30px;
   color: @color-pink;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.form-field__list {
-  background-color: @color-grey;
+.form-field__user-item {
+  input {
+  width: 100%;
+  font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
+
+.form-field__message {
+  textarea {
+    width: 100%;
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
+}
+
+@media @mobile-widths-only {
+  .form-field {
+    fieldset {
+      border: none;
+    }
+  }
+  .form-field__hidden {
+    display: none;
+  }
+  .form-field__user-item {
+    input {
+    width: 100%;
+    }
+   }
+  .form-field__message {
+    textarea {
+      width: 100%;
+    }
+  }
+  .form-field__note {
+    text-align: center;
+  }
+  .form-field__user-items,
+  .form-field__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .form-field__list {
+  background-color: @color-grey;
+  }
+}
+
+@media @tablet-widths {
+  .form-field__user-items,
+  .form-field__list {
+    margin: 30px 0;
+  }
+  .form-field__user-item {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .form-field__order-1 {
+    order: 1;
+  }
+  .form-field__order-2 {
+    order: 2;
+  }
+  .form-field__order-3 {
+    order: 3;
+  }
+  .form-field__order-5 {
+    order: 5;
+    margin: 30px 0;
+    display: flex;
+  }
+  .form-field__message {
+    order: 4;
+  }
+  .form-field__note {
+    width: 285px;
+    padding-left: 115px;
+    margin: 0;
+  }
+}
+
+@media @desktop-widths {
+  .form-field__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-field__order-0,
+  .form-field__order-1 {
+    width: 435px;
+  }
+  .form-field__order-3,
+  .form-field__message {
+width: 100%;
+  }
+  .form-field__check {
+    margin: 15px 25px;
+
+  }
+  .form-field__email,
+  .form-field__tel {
+    order: -1;
+  }
+
+
+  .form-field__user-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form-field__order-5 {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form-field__order-2 {
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .form-field__user-item {
+    flex-direction: column;
+    width: 375px;
+    margin: 0;
+    }
+  }
+}
+

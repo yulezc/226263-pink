@@ -2,16 +2,15 @@
   .container();
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: @color-blue;
   color: #ffffff;
-  p {
-  width: 260px;
-  margin: 0 auto;
-  }
   h2 {
     display: none;
   }
+  p {
+    text-align: center;
+  }
 }
+
 .download__item {
   list-style: none;
   display: inline-block;
@@ -24,7 +23,6 @@
   padding: 10px 35px;
   background-color: @color-blue;
   border: 3px solid #ffffff;
-  border-radius: 50%;
   margin: 0 auto;
   font-weight: bold;
   font-size: 18px;
@@ -39,30 +37,36 @@
   padding: 0;
 }
 
+@media @mobile-widths-only {
+  .download {
+    background-color: @color-blue;
+  }
+}
+
 @media @tablet-widths {
   .download {
-    width: 340px;
-    min-height: 390px;
-    margin-top: -440px;
-    margin-left: ;
-    background-color: transparent;
+    min-height: 620px;
+    margin-top: -620px;
+    padding-left: 0;
+
     h2 {
       display: block;
       font-weight: 300;
+      text-align: center;
     }
+  }
+  .download__wrapper {
+    width: 300px;
+    padding-top: 95px;
   }
 }
 
 @media @desktop-widths {
-    .download {
-    width: 340px;
-    min-height: 540px;
-    margin-top: -630px;
-    margin-left: ;
-    background-color: transparent;
-    h2 {
-      display: block;
-      font-weight: 300;
-    }
+  .download {
+    min-height: 744px;
+    margin-top: -744px;
+  }
+  .download__wrapper {
+    padding-top: 115px;
   }
 }

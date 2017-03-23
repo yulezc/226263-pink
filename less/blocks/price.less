@@ -1,4 +1,4 @@
-.price__wrapper {
+.price {
   .container();
   background-color: @color-grey;
 }
@@ -15,4 +15,18 @@
 }
 .price__cost {
   font-weight: 300;
+}
+
+@media @mobile-widths-only {
+  .price__column-0,
+  .price__column-1,
+  .price__column-3 {
+    display: none;
+  }
+}
+
+@media @tablet-widths {
+  .price__row {
+    visibility: hidden;
+  }
 }
