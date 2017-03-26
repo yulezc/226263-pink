@@ -1,5 +1,8 @@
-.page-footer--index {
+.page-footer {
+  .container();
   background-color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
   span {
     color: @color-pink;
     font-weight: 300;
@@ -9,12 +12,132 @@
     text-decoration: none;
   }
 }
+
+.page-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links,
+.social-link {
+  padding: 0;
+  margin: 0;
+}
+
 .page-footer__title {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  text-align: center;
 }
 
 .social-links li {
   list-style: none;
+}
+
+.page-footer__contacts {
+  width: 245px;
+  text-align: center;
+  margin: 5px 20px 10px 20px;
+}
+
+.social-links {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.social-link {
+  display: block;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media @mobile-widths-only {
+  .page-footer__top {
+    padding-top: 25px;
+  }
+  .page-footer__bottom-index {
+    display: none;
+  }
+  .page-footer__bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 205px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer__top {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+  .page-footer__contacts {
+    margin: 0px 20px 40px 20px;
+  }
+  .page-footer__title {
+    margin: 40px auto;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .page-footer__bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer__top {
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .page-footer__title {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 45px 200px 55px 200px;
+  }
+  .page-footer__email {
+    order: 1;
+  }
+  .page-footer__contacts {
+    span {
+      display: block;
+      padding-top: 20px;
+    }
+  }
+  .page-footer__bottom {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .page-footer__bottom-index {
+    padding-top: 70px;
+  }
+
+
 }

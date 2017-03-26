@@ -1,10 +1,113 @@
 .advantages {
-  line-height: 30px;
-  padding-bottom: 315px;
+  .container();
   background-color: @color-grey;
-  background: url("../img/iphone-screen-mobile@1x.png") no-repeat 50% 0%;
-
+  font-size: 14px;
+  line-height: 30px;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
 }
+
 .advantages__items {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.advantages__item {
+  padding: 0 20px;
+}
+
+@media @mobile-widths-only {
+  .advantages__items {
+    padding-top: 33px;
+    padding-bottom: 20px;
+    p {
+      margin-top: 5px;
+      line-height: 26px;
+    }
+  }
+  .advantages__item {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .advantages__item-title {
+    margin-bottom: 0px;
+  }
+  .advantages {
+    background-position: 50% 477px;
+    padding-bottom: 265px;
+  }
+}
+
+@media @tablet-widths {
+  .advantages__items {
+    padding-left: 290px;
+    padding-top: 70px;
+
+  }
+  .advantages__item {
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+    padding-bottom: 25px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .advantages__item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .advantages {
+    background-size: auto;
+    background-position: 0 0px;
+    background-size: 266px 546px;
+    margin-top: 20px;
+  }
+}
+
+@media @desktop-widths {
+  .advantages__wrapper {
+    padding: 360px 0 0 0;
+  }
+  .advantages__items {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .advantages__item-title {
+    margin-bottom: 25px;
+  }
+  .advantages {
+    background-image: none;
+    padding: 0;
+  }
+  .advantages__item-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .advantages__item {
+    display: table-cell;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 0px 0 0px;
+    &:first-child {
+      padding-left: 25px;
+      padding-right: 65px;
+    }
+    &:nth-child(2) {
+      padding-left: 10px;
+      padding-right: 60px;
+    }
+    &:nth-child(3) {
+      padding-left: 20px;
+      padding-right: 35px;
+    }
+  }
 }

@@ -1,15 +1,119 @@
 .main-nav {
+  .container();
   background-color: @color-blue;
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
 }
 
+.main-nav__items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-nav__items,
 .main-nav__item {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.main-nav__item {
+  width: auto;
+  list-style: none;
+  text-align: center;
+  background-color: @color-blue;
+
   a {
+    display: block;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 15px 70px 15px 70px;
+
+  }
+}
+
+.main-nav__btn-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 90px;
+  height: 66px;
+  font-size: 0;
+  background-color: @color-blue;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav__btn-open::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff,
+              0 16px 0 0 #ffffff;
+}
+
+.main-nav__btn-open:hover::before {
+  background-color: @color-pink;
+  box-shadow: 0 8px 0 0 @color-pink,
+              0 16px 0 0 @color-pink;
+}
+
+.main-nav__btn-open:active::before {
+  background-color: rgba(210, 40, 86, 0.3);
+  box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3),
+              0 16px 0 0 rgba(210, 40, 86, 0.3);
+}
+
+@media @mobile-widths-only {
+  .main-nav__item {
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+@media @tablet-widths {
+  .main-nav__item {
+    width: auto;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+@media @desktop-widths {
+  .main-nav {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 110px;
+
+  }
+  .main-nav__items {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    height: 110px;
+  }
+  .main-nav__item {
+
+    background-color: transparent;
+    border: none;
+    a {
+      text-transform: none;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 46px 0;
+    }
+  }
+  .main-nav__btn-open {
+    display: none;
   }
 }
