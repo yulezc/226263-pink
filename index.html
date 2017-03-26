@@ -45,7 +45,7 @@
     <article>
       <header class="caption">
         <h2>Устали от серости мегаполиса?<br>
-          Нам есть, что вам предложить!</h2>
+          <span class="caption__row">Нам есть, что вам предложить!</span></h2>
       </header>
       <section class="advantages">
         <div class="advantages__wrapper">
@@ -54,7 +54,7 @@
             <li class="advantages__item">
               <h3 class="advantages__item-title">Поднимает настроение</h3>
               <p>
-                laquoПриложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
               </p>
             </li>
 
@@ -78,46 +78,47 @@
 
       <section class="research">
         <div class="research-item">
-          <h2>Эффект на 24 часа!</h2>
+          <h2>Эффект <span class="research__title">на 24 часа!</span></h2>
           <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a href="#">Узнать больше об исследовании</a>
         </div>
       </section>
 
       <section class="reviews">
-        <div class="reviews__wrapper  reviews-slider">
-          <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-          <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-2">
-          <input class="reviews-slider__input" type="radio" name="reviews" id="reviews-input-3">
+        <div class="reviews__wrapper  reviews__slider">
+          <input class="reviews__slider-input" type="radio" name="reviews" id="reviews-input-1" checked>
+          <input class="reviews__slider-input" type="radio" name="reviews" id="reviews-input-2">
+          <input class="reviews__slider-input" type="radio" name="reviews" id="reviews-input-3">
           <ul class="reviews__items">
 
-            <li class="reviews__item">
+            <li class="reviews__item" id="slide1">
               <p class="reviews__item-name">Николай Петров</p>
               <p class="reviews__item-age">25 лет, водитель трамвая</p>
-              <blockquote>
-                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+              <blockquote class="reviews__item-content">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
             </li>
 
-            <li class="reviews__item">
-              <p class="reviews__item-name"></p>
-              <p class="reviews__item-age"></p>
-              <blockquote>
-
+            <li class="reviews__item" id="slide2">
+              <p class="reviews__item-name">Петя Васечкин</p>
+              <p class="reviews__item-age">25 лет, водитель трамвая</p>
+              <blockquote class="reviews__item-content">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
             </li>
 
-            <li class="reviews__item">
-              <p class="reviews__item-name"></p>
-              <p class="reviews__item-age"></p>
-              <blockquote>
-
+            <li class="reviews__item" id="slide3">
+              <p class="reviews__item-name">Саша Иванов</p>
+              <p class="reviews__item-age">25 лет, водитель трамвая</p>
+              <blockquote class="reviews__item-content">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А  еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
             </li>
           </ul>
-          <div class="reviews__toggles  reviews-slider__toggles">
-            <label class="reviews-slider__toggle" for="reviews-input-1"></label>
-            <label class="reviews-slider__toggle" for="reviews-input-2"></label>
-            <label class="reviews-slider__toggle" for="reviews-input-3"></label>
+          <div class="reviews__slider-toggles">
+            <label class="reviews__slider-toggle" for="reviews-input-1"></label>
+            <label class="reviews__slider-toggle" for="reviews-input-2"></label>
+            <label class="reviews__slider-toggle" for="reviews-input-3"></label>
           </div>
         </div>
       </section>
@@ -128,10 +129,10 @@
           <input class="price-slider__input" type="radio" name="price" id="price-input-2" checked>
           <input class="price-slider__input" type="radio" name="price" id="price-input-3">
 
-          <div class="price__table">
-            <table>
+          <div class="price__table-wrapper">
+            <table class="price__table">
               <tr>
-                <th class="price__column-0"></th>
+                <td class="price__column-0  price__row-hidden"></td>
                 <th class="price__column-1">
                   <span>База</span>
                   <span class="price__cost">1,99 USD</span>
@@ -148,25 +149,25 @@
 
               <tr>
                 <td class="price__column-0">Розовый фильтр</td>
-                <td class="price__column-1  price__row">Розовый фильтр</td>
-                <td class="price__column-2  price__row">Розовый фильтр</td>
-                <td class="price__column-3  price__row">Розовый фильтр</td>
+                <td class="price__column-1"><span class="price__row">Розовый фильтр</span></td>
+                <td class="price__column-2"><span class="price__row">Розовый фильтр</span></td>
+                <td class="price__column-3"><span class="price__row">Розовый фильтр</span></td>
               </tr>
                 <tr>
                 <td class="price__column-0">Смайлики</td>
-                <td class="price__column-1  price__row">Смайлики</td>
-                <td class="price__column-2  price__row">Смайлики</td>
-                <td class="price__column-3  price__row">Смайлики</td>
+                <td class="price__column-1"><span class="price__row">Смайлики</span></td>
+                <td class="price__column-2"><span class="price__row">Смайлики</span></td>
+                <td class="price__column-3"><span class="price__row">Смайлики</span></td>
               </tr>
               <tr>
                 <td class="price__column-0">Комментарии</td>
-                <td class="price__column-1  price__row">Комментарии</td>
-                <td class="price__column-2  price__row">Комментарии</td>
-                <td class="price__column-3  price__row">Комментарии</td>
+                <td class="price__column-1"><span class="price__row">Комментарии</span></td>
+                <td class="price__column-2"><span class="price__row">Комментарии</span></td>
+                <td class="price__column-3"><span class="price__row">Комментарии</span></td>
               </tr>
             </table>
           </div>
-          <div class="price__toggles  price-slider__toggles">
+          <div class="price-slider__toggles">
             <label class="price-slider__toggle" for="price-input-1"></label>
             <label class="price-slider__toggle" for="price-input-2"></label>
             <label class="price-slider__toggle" for="price-input-3"></label>
@@ -175,23 +176,43 @@
       </section>
     </article>
 
-    <footer class="page-footer--index">
-    <div class="page-footer__wrapper">
+    <footer class="page-footer">
+    <div class="page-footer__top">
       <p class="page-footer__title">Остались вопросы?<br>Свяжитесь с нами!</p>
       <p class="page-footer__contacts">
         <b>Звоните:</b><br>
         <a href="tel:+78125556666"><span>+7 (812) 555-66-66</span></a>
       </p>
-      <p class="page-footer__contacts">
+      <p class="page-footer__contacts  page-footer__email">
         <b>Пишите:</b><br>
         <a href="mailto:mail@htmlacacademy.ru"><span>mail@htmlacademy.ru</span></a>
       </p>
       <p class="page-footer__contacts">
         <b>Приезжайте в гости:</b><br>
-        <span>ул. Б. Конюшенная, д. 19/8</span>
+        <span>ул. Большая Конюшенная, 19/8</span>
       </p>
       </div>
       <div class="map"></div>
+      <div class="page-footer__bottom  page-footer__bottom-index">
+        <div class="page-footer__logo"><a href="#"><img src="img/logo-pink-blue-mobile.svg"></a></div>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li>
+              <a class="social-link social-link--tw" href="#"><img src="img/icon-twitter.svg"></a>
+            </li>
+            <li>
+              <a class="social-link social-link--fb" href="#"><img src="img/icon-facebook.svg"></a>
+            </li>
+            <li>
+              <a class="social-link social-link--yt" href="#"><img src="img/icon-youtube.svg"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" alt="HTML Academy"></a>
+        </div>
+      </div>
     </footer>
 
   </body>

@@ -7,18 +7,51 @@
 }
 
 @media @tablet-widths {
+  .research__title {
+    white-space: nowrap;
+  }
   .research {
-    min-height: 300px;
+    padding-top: 75px;
   }
   .research-item {
-  display: block;
-  padding-left: 340px;
+    display: block;
+    padding-left: 310px;
+    margin-right: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+      padding-right: 105px;
+      margin-bottom: 0px;
+    }
+    p {
+      margin-top: 10px;
+    }
+    a {
+      color: @color-pink;
+    }
   }
 }
 
 @media @desktop-widths {
+  .research {
+    padding-top: 120px;
+  }
   .research-item {
     display: block;
-    padding-left: 480px;
+    padding-left: 365px;
+
+    font-size: 18px;
+    line-height: 30px;
+    p {
+      margin-top: 20px;
+      padding-right: 45px;
+      padding-bottom: 15px;
+    }
+    a {
+      text-decoration: none;
+    }
   }
 }

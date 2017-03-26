@@ -2,9 +2,46 @@
   .container();
   text-align: center;
   background-color: #ffffff;
-  font-size: 24px;
-  line-height: 30px;
   h2 {
     font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media @mobile-widths-only {
+  .caption {
+    h2 {
+      margin: 37px 40px 60px 40px;
+      white-space: pre-line;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .caption {
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+      margin: 45px 15px 45px 15px;
+    }
+    .caption__row {
+      display: block;
+      margin: 0 30px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .caption {
+    h2 {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 65px 15px 75px 15px;
+    }
+    .caption__row {
+      display: block;
+      margin: 0 230px;
+    }
   }
 }

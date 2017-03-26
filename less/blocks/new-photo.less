@@ -1,19 +1,20 @@
 .new-photo {
   .container();
-  h3 {
-    margin: 0 auto;
-  }
+}
+
+.new-photo h2 {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 30px 40px 30px;
 }
 
 .new-photo__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   background-color: @color-grey;
-}
-
-.new-photo__photo {
-  width: 280px;
+  padding: 20px 20px 50px 20px;
 }
 
 .new-photo__filter {
@@ -27,11 +28,102 @@
 }
 
 .new-photo__btn {
+  width: 280px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: @color-grey;
+  border-radius: 27px;
+  padding: 16px 80px;
+}
+
+.new-photo__btn--post {
+  border: 3px solid @color-pink;
   color: @color-pink;
+  margin-bottom: 12px;
+}
+
+.new-photo__btn--cancel {
+  border: 3px solid #dddfe0;
+  color: #dddfe0;
+}
+
+@media @mobile-widths-only {
+  .new-photo__photo {
+    width: 280px;
+  }
+  .new-photo__filter-list {
+    min-height: 157px;
+  }
+  .new-photo__command {
+    border-top: 1px solid #dddfe0;
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+  .new-photo__wrapper {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 @media @tablet-widths {
   .new-photo__filter {
+  }
+  .new-photo h2 {
+    font-size: 18px;
+    margin: 47px 85px 70px 80px;
+  }
+  .new-photo__wrapper {
+    flex-direction: row;
+    padding: 57px 0px 45px 0px;
+  }
+  .new-photo__photo img {
+    width: 300px;
+    height: 400px;
+  }
+  .new-photo__filter-list {
+    width: 275px;
+    height: 200px;
+  }
+  .new-photo__command {
+    padding-top: 66px;
+    margin-left: 48px;
+    margin-right: 13px;
+  }
+  .new-photo__btn--post {
+    margin-bottom: 24px;
+  }
+  .new-photo__btn {
+    width: 260px;
+  }
+}
+@media @desktop-widths {
+  .new-photo h2 {
+    font-size: 18px;
+    margin: 5px 85px 65px 80px;
+  }
+  .new-photo__wrapper {
+    padding: 57px 60px 50px 80px;
+  }
+  .new-photo__photo {
+    padding-right: 90px;
+  }
+  .new-photo__filter-list {
+    width: 410px;
 
+  }
+  .new-photo__command {
+    width: 410px;
+    padding-top: 146px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .new-photo__btn {
+    width: 183px;
+    padding: 16px 30px;
+  }
+  .new-photo__btn--post {
+    margin-bottom: 0px;
+    margin-right: 40px;
   }
 }
