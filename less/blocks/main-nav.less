@@ -1,5 +1,5 @@
 .main-nav {
-  .container();
+  width: 100%;
   background-color: @color-blue;
   font-weight: bold;
   font-size: 18px;
@@ -31,7 +31,6 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 15px 70px 15px 70px;
-
   }
 }
 
@@ -90,20 +89,18 @@
 
 @media @desktop-widths {
   .main-nav {
-    background-color: transparent;
-    display: flex;
-    flex-wrap: nowrap;
+    background-color: rgba(29, 39, 50, 0.3);
     height: 110px;
-
   }
+
   .main-nav__items {
     flex-direction: row;
     justify-content: space-between;
     width: 620px;
     height: 110px;
   }
-  .main-nav__item {
 
+  .main-nav__item {
     background-color: transparent;
     border: none;
     a {
@@ -113,7 +110,13 @@
       padding: 46px 0;
     }
   }
+
   .main-nav__btn-open {
     display: none;
+  }
+
+  .main-nav__wrapper {
+    .container();
+    display: flex;
   }
 }
