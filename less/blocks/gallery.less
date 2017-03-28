@@ -1,31 +1,24 @@
-.gallery {
-  .container();
-}
-
 .gallery h2 {
+  .container();
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
-  margin: 45px 35px 50px 35px;
+  padding: 45px 35px 50px 35px;
+  box-sizing: border-box;
 }
 
 .gallery__list {
+  .container();
   display: flex;
   flex-direction: column;
 }
 
-.gallery__list,
-.gallery__item {
-  padding: 0;
-  margin: 0;
-}
-
-.gallery__photo--best {
+.gallery__panorama-photo {
   position: relative;
 }
 
-.gallery__photo-panorama {
+.gallery__photo-icon {
   position: absolute;
   font-size: 12px;
   line-height: 24px;
@@ -35,74 +28,93 @@
   padding: 6px 22px;
 }
 
-.gallery__photo--best img {
+.gallery__panorama-photo img {
   width: 100%;
   height: 137px;
 }
 
+.gallery__photo img {
+  display: block;
+}
+
 .gallery__item {
-  list-style: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: @color-grey;
+}
+
+.gallery__panorama {
   margin-bottom: 20px;
 }
 
-.gallery__item:not(:first-child) {
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: @color-grey;
-  }
-
 @media @mobile-widths-only {
-  .gallery__photo-panorama {
+
+  .gallery__photo-icon {
     top: 0;
-    right: 20px;
+    left: 50%;
   }
 }
 
 @media @tablet-widths {
+
   .gallery__list {
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .gallery__item:first-child {
+
+  .gallery__item {
     margin-bottom: 50px;
   }
-  .gallery__item:not(:first-child) {
+
+  .gallery__item {
     width: 300px;
     margin: 0 0 20px 0;
   }
+
   .gallery__photo img {
     height: 300px;
     width: 300px;
   }
-  .gallery__photo--best img {
+
+  .gallery__panorama-photo img {
     height: 509px;
     width: 100%;
   }
+
   .gallery h2 {
     font-size: 18px;
-    margin: 93px 85px 75px 85px;
+    padding: 93px 85px 75px 85px;
   }
 
-  .gallery__photo-panorama {
+  .gallery__photo-icon {
     top: 57px;
-    right: 0px;
+    right: 25%;
+    transform: translateX(50%);
   }
 }
 
 @media @desktop-widths {
+
   .gallery h2 {
     font-size: 18px;
-    margin: 93px 180px 85px 180px;
+    padding: 93px 180px 85px 180px;
   }
+
   .gallery__photo img {
     height: 400px;
-
   }
-  .gallery__photo--best img {
+
+  .gallery__panorama-photo img {
     height: 506px;
   }
-  .gallery__item:not(:first-child) {
+
+  .gallery__item {
     margin: 0 0 54px 0;
+  }
+
+  .gallery__photo-icon {
+    right: 20%;
   }
 }

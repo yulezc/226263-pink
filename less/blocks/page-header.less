@@ -1,8 +1,13 @@
 .page-header {
-  .container();
+  width: 100%;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.page-header__menu {
+.page-header__menu-wrapper {
+  .container();
   position: relative;
 }
 
@@ -11,12 +16,17 @@
 }
 
 @media @mobile-widths-only {
+  .page-header--index {
+    background-image: none;
+  }
+
   .page-header__logo {
     top: 22px;
     left: 20px;
     width: 75px;
     height: 22px;
   }
+
   .page-header__menu {
     height: 69px;
     border-bottom: 1px solid #000000;
@@ -30,6 +40,7 @@
     width: 147px;
     height: 41px;
   }
+
   .page-header__menu {
     height: 109px;
     border-bottom: 1px solid #000000;
@@ -37,17 +48,24 @@
 }
 
 @media @desktop-widths {
-  .page-header__wrapper {
-    background-color: rgba(29, 39, 50, 0.3);
+  .page-header--index {
+    height: 854px;
   }
+
   .page-header__logo {
     width: 150px;
     height: 27px;
     top: 27px;
     left: 0;
   }
+
+  .page-header__menu-wrapper {
+    width: 320px;
+  }
+
   .page-header__menu {
     width: 320px;
+    margin: 0;
     border: none;
   }
 }

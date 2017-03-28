@@ -1,4 +1,4 @@
-.research {
+.research__wrapper {
   .container();
 }
 
@@ -10,9 +10,11 @@
   .research__title {
     white-space: nowrap;
   }
-  .research {
+
+  .research__wrapper {
     padding-top: 75px;
   }
+
   .research-item {
     display: block;
     padding-left: 310px;
@@ -37,10 +39,14 @@
 
 @media @desktop-widths {
   .research {
-    padding-top: 120px;
-    padding-bottom: 115px;
     background-color: @color-grey;
   }
+
+  .research__wrapper {
+    padding-top: 120px;
+    padding-bottom: 115px;
+  }
+
   .research-item {
     display: block;
     padding-left: 365px;
