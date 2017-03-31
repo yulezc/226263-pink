@@ -32,6 +32,14 @@
     text-transform: uppercase;
     padding: 15px 70px 15px 70px;
   }
+
+  &:hover a {
+    color: @color-pink;
+  }
+
+  &:active a {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__btn-open {
@@ -88,8 +96,9 @@
 }
 
 @media @desktop-widths {
+
   .main-nav {
-    background-color: rgba(29, 39, 50, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     height: 110px;
   }
 
@@ -103,12 +112,21 @@
   .main-nav__item {
     background-color: transparent;
     border: none;
+
     a {
       text-transform: none;
       font-weight: 400;
       line-height: 18px;
-      padding: 46px 0;
+      padding: 46px 0 15px 0;
     }
+
+    &:hover a {
+      border-bottom: 2px solid @color-pink;
+    }
+  }
+
+  .main-nav__item--active a {
+    border-bottom: 2px solid #ffffff;
   }
 
   .main-nav__btn-open {

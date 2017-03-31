@@ -1,10 +1,10 @@
 .page-header__title {
-    text-align: center;
-    color: #ffffff;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 300;
-    margin: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 0;
 }
 
 .page-title {
@@ -12,18 +12,10 @@
 }
 
 @media @mobile-widths-only {
-  .page-title--index {
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    height: 462px;
-    margin-top: -66px;
-    background-position: center 0;
-  }
 
-  .page-title__wrapper {
-    .container();
+  .page-title.page-title--index {
     background-image: url("../img/iphone-hand-mobile@1x.png");
-    height: 462px;
+    height: 396px;
     background-repeat: no-repeat;
     background-position: left bottom;
   }
@@ -36,6 +28,16 @@
     height: 170px;
   }
 }
+
+@media (max-width: 699px) and (min-resolution: 144dpi),
+       (max-width: 699px) and (min-resolution: 1.5dppx) {
+
+  .page-title.page-title--index {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-size: 258px 286px;
+  }
+}
+
 @media @tablet-widths {
   .page-title--index {
     display: none;

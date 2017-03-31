@@ -1,13 +1,15 @@
-.page-footer {
+.page-footer__wrapper {
   .container();
   background-color: #ffffff;
   font-size: 18px;
   line-height: 30px;
+
   span {
     color: @color-pink;
     font-weight: 300;
     font-size: 24px;
   }
+
   a {
     text-decoration: none;
   }
@@ -21,21 +23,11 @@
   align-items: center;
 }
 
-.social-links,
-.social-link {
-  padding: 0;
-  margin: 0;
-}
-
 .page-footer__title {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
-}
-
-.social-links li {
-  list-style: none;
 }
 
 .page-footer__contacts {
@@ -46,27 +38,78 @@
 
 .social-links {
   display: flex;
-  width: 180px;
   justify-content: space-between;
+  height: 50px;
+  width: 176px;
 }
 
 .social-link {
-  display: block;
   position: relative;
   width: 45px;
   height: 45px;
-  font-size: 0;
   border: 3px solid #e9ebec;
   border-radius: 50%;
-  img {
+
+  svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    fill: @color-pink;
+  }
+
+  &:hover {
+    border-color: @color-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+    border-color: #e9ebec;
+  }
+}
+
+.page-footer__copyright {
+  position: relative;
+  width: 130px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: @color-blue;
+
+  svg {
+    height: 33px;
+    width: 27px;
+    fill: @color-pink;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  &:hover svg {
+    fill: @color-blue;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo {
+
+  &-desktop {
+    display: none;
+  }
+
+  &:hover path {
+    fill: @color-pink;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }
 
 @media @mobile-widths-only {
+
   .page-footer__top {
     padding-top: 25px;
   }
@@ -87,6 +130,7 @@
 }
 
 @media @tablet-widths {
+
   .page-footer__top {
     flex-wrap: wrap;
     flex-direction: row;
@@ -108,18 +152,31 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
 @media @desktop-widths {
+
   .page-footer__top {
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 5px;
+  }
+
+  .page-footer__logo {
+
+    &-mobile {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+    }
   }
 
   .page-footer__title {
