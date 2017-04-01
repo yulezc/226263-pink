@@ -271,34 +271,59 @@
       </section>
 
       <section class="new-photo">
-        <h2>Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
-        <div class="new-photo__wrapper">
-          <div class="new-photo__photo">
-            <picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@1x.jpg 2x">
-                <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@1x.jpg 2x">
-                <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg" alt="Новая фотография">
-            </picture>
-          </div>
-          <div class="new-photo__filter">
-            <div class="new-photo__filter-list">
 
-              <img src="img/icon-editor-crop.svg">
-              <img src="img/icon-editor-fill.svg">
-              <img src="img/icon-editor-contrast.svg">
+        <div class="new-photo__top">
+            <h2>Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
+        </div>
+
+        <div class="new-photo__bottom">
+          <div class="new-photo__wrapper">
+            <div class="new-photo__photo">
+              <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@1x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@1x.jpg 2x">
+                  <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg" alt="Новая фотография">
+              </picture>
             </div>
-            <div class="new-photo__range-controls">
-              <div class="new-photo__scale"></div>
-              <div class="new-photo__toggle"></div>
-            </div>
-            <div class="new-photo__command">
-              <button class="new-photo__btn  new-photo__btn--post" type="button">Запостить</button>
-              <button class="new-photo__btn  new-photo__btn--cancel">Отмена</button>
+
+            <div class="new-photo__filter">
+              <div class="new-photo__filter-list">
+
+                <div class="new-photo__filter-item">
+                  <button class="new-photo__filter-crop" type="button">Обрезка</button>
+                  <div class="new-photo__range-control new-photo__range-control--crop">
+                    <div class="new-photo__scale  new-photo__scale--crop"></div>
+                    <div class="new-photo__toggle  new-photo__toggle-crop"></div>
+                  </div>
+                </div>
+
+                <div class="new-photo__filter-item">
+                  <button class="new-photo__filter-fill" type="button">Заливка</button>
+                  <div class="new-photo__range-control new-photo__range-control--fill">
+                    <div class="new-photo__scale  new-photo__scale--fill"></div>
+                    <div class="new-photo__toggle  new-photo__toggle-fill"></div>
+                  </div>
+                </div>
+
+                <div class="new-photo__filter-item">
+                  <button class="new-photo__filter-contrast" type="button">Контраст</button>
+                  <div class="new-photo__range-control new-photo__range-control--contrast">
+                    <div class="new-photo__scale  new-photo__scale--contrast"></div>
+                    <div class="new-photo__toggle  new-photo__toggle-contrast"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="new-photo__command">
+                <button class="new-photo__btn  new-photo__btn--post" type="button">Запостить</button>
+                <button class="new-photo__btn  new-photo__btn--cancel">Отмена</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
 
