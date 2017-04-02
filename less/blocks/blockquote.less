@@ -12,12 +12,12 @@
 
 .gallery__item .blockquote {
   background-color: @color-grey;
-  padding: 16px 5px 24px 15px;
+  padding: 18px 5px 19px 18px;
 }
 
 .gallery__panorama .blockquote__wrapper {
   margin: 0px 20px 0 20px;
-  padding: 16px 5px 23px 15px;
+  padding: 18px 5px 19px 18px;
   background-color: @color-grey;
 }
 
@@ -29,6 +29,26 @@
   text-transform: uppercase;
   font-weight: 300;
 }
+
+.blockquote__like_icon {
+  width: 14px;
+  height: 13px;
+  background-image: url("../img/icon-heart.svg");
+  background-size: 14px 12px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.blockquote__like {
+  font-size: 12px;
+  line-height: 24px;
+}
+
 
 .blockquote__like_link {
   text-transform: uppercase;
@@ -42,10 +62,11 @@
 
 .blockquote__text {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 @media @tablet-widths {
+
   .gallery__panorama {
     margin-bottom: 50px;
   }
@@ -54,25 +75,62 @@
     margin: 0;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px 20px 25px;
+    padding: 24px 27px 12px 28px;
+
     .blockquote__text {
       order: 1;
     }
+
+    .blockquote__like {
+      display: flex;
+      align-items: center;
+      width: 120px;
+    }
+
+    .blockquote__like_icon {
+      margin-left: 18px;
+      margin-right: 0;
+      align-self: top;
+    }
   }
+
   .gallery__item .blockquote {
-    padding: 20px 20px 30px 25px;
-      .blockquote__text {
+    padding: 25px 27px 20px 28px;
+
+    .blockquote__text {
       min-height: 48px;
-      }
+      margin-bottom: 15px;
+    }
+
+    .blockquote__like {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .blockquote__like_count {
+      min-width: 30px;
+    }
+
+    .blockquote__like_icon {
+      margin-left: 130px;
+      margin-right: 0;
+    }
+  }
+
+  .blockquote__like_icon {
+    order: 1;
   }
 }
 
 @media @desktop-widths {
+
   .gallery__item .blockquote {
-    padding: 20px 25px 25px 25px;
+    padding: 23px 30px 22px 29px;
   }
 
   .gallery__panorama .blockquote__wrapper {
-    padding: 20px 25px 20px 25px;
+    padding: 25px 30px 13px 29px;
   }
 }

@@ -3,7 +3,7 @@
   line-height: 30px;
   font-weight: 400;
   text-align: center;
-  margin: 20px 30px 40px 30px;
+  margin: 23px 30px 40px 30px;
 }
 
 .new-photo__top {
@@ -185,7 +185,7 @@
 @media @tablet-widths {
 
   .new-photo__filter {
-    margin-left: 40px;
+    margin-left: 45px;
   }
 
   .new-photo__filter-item {
@@ -249,7 +249,6 @@
     margin-left: 28px;
   }
 
-
   .new-photo__range-control {
     position: relative;
     width: 240px;
@@ -263,11 +262,12 @@
 
   .new-photo h2 {
     font-size: 18px;
-    margin: 47px 85px 70px 80px;
+    margin: 45px 85px 70px 85px;
   }
 
   .new-photo__wrapper {
     flex-direction: row;
+    flex-wrap: nowrap;
     padding: 57px 0px 50px 0px;
   }
 
@@ -293,14 +293,14 @@
 @media @desktop-widths {
 
     .new-photo__filter-item {
-
-    width: 412px;
-    height: 72px;
+      width: 412px;
+      height: 72px;
 
     .new-photo__filter-crop {
       width: 45px;
       height: 45px;
-      margin-top: 0px;
+      margin-bottom: 5px;
+      margin-top: 0;
       background-size: contain;
     }
 
@@ -317,14 +317,22 @@
       height: 32px;
       opacity: 1;
       margin-left: 5px;
-      margin-top: 0px;
       margin-right: 7px;
       background-image: url("../img/icon-editor-contrast-pink.svg");
       background-size: contain;
+      background-color: transparent;
     }
   }
 
- .new-photo__range-control {
+  .new-photo__filter-item:first-child {
+    height: 56px;
+
+    .new-photo__range-control {
+      margin-top: 20px;
+    }
+  }
+
+  .new-photo__range-control {
     margin: 40px auto 20px 45px;
   }
 
@@ -348,17 +356,16 @@
 
   .new-photo h2 {
     font-size: 18px;
-    margin: 5px 85px 65px 80px;
+    margin: 5px 85px 65px 85px;
   }
 
   .new-photo__wrapper {
-
-    padding: 57px 60px 50px 80px;
+    padding: 55px 60px 60px 80px;
     margin-bottom: 30px;
   }
 
   .new-photo__photo {
-    padding-right: 50px;
+    padding-right: 45px;
   }
 
   .new-photo__filter-list {

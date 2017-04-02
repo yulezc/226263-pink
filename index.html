@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="page-header page-header--index">
-      <div class="main-nav  main-nav--opened">
+      <div class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="page-header__menu">
             <div class="page-header__menu-wrapper">
@@ -66,7 +66,7 @@
                 </a>
 
               </div>
-              <button class="main-nav__btn-open" type="button">Открыть меню</button>
+              <button class="main-nav__btn" type="button">Открыть меню</button>
             </div>
           </div>
           <ul class="main-nav__items">
@@ -144,7 +144,7 @@
     <section class="research">
       <div class="research__wrapper">
         <div class="research-item">
-          <h2>Эффект <span class="research__title">на 24 часа!</span></h2>
+          <h2 class="research__title">Эффект <span class="research__title-item">на 24 часа!</span></h2>
           <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
           <a href="#">Узнать больше об исследовании</a>
         </div>
@@ -206,7 +206,7 @@
                 <span>База</span>
                 <span class="price__cost">1,99 USD</span>
               </th>
-              <th class="price__column-2">
+              <th class="price__column-2  price__hit">
                 <span>Стандарт</span>
                 <span class="price__cost">3,99 USD</span>
               </th>
@@ -217,21 +217,21 @@
             </tr>
             <tr>
               <td class="price__column-0">Розовый фильтр</td>
-              <td class="price__column-1"><span class="price__row">Розовый фильтр</span></td>
-              <td class="price__column-2"><span class="price__row">Розовый фильтр</span></td>
-              <td class="price__column-3"><span class="price__row">Розовый фильтр</span></td>
+              <td class="price__column-1  price__check-on"><span class="price__row">Розовый фильтр</span></td>
+              <td class="price__column-2  price__check-on"><span class="price__row">Розовый фильтр</span></td>
+              <td class="price__column-3  price__check-on"><span class="price__row">Розовый фильтр</span></td>
             </tr>
             <tr>
               <td class="price__column-0">Смайлики</td>
-              <td class="price__column-1"><span class="price__row">Смайлики</span></td>
-              <td class="price__column-2"><span class="price__row">Смайлики</span></td>
-              <td class="price__column-3"><span class="price__row">Смайлики</span></td>
+              <td class="price__column-1  price__check-off"><span class="price__row">Смайлики</span></td>
+              <td class="price__column-2  price__check-on"><span class="price__row">Смайлики</span></td>
+              <td class="price__column-3  price__check-on"><span class="price__row">Смайлики</span></td>
             </tr>
             <tr>
               <td class="price__column-0">Комментарии</td>
-              <td class="price__column-1"><span class="price__row">Комментарии</span></td>
-              <td class="price__column-2"><span class="price__row">Комментарии</span></td>
-              <td class="price__column-3"><span class="price__row">Комментарии</span></td>
+              <td class="price__column-1  price__check-off"><span class="price__row">Комментарии</span></td>
+              <td class="price__column-2  price__check-off"><span class="price__row">Комментарии</span></td>
+              <td class="price__column-3  price__check-on"><span class="price__row">Комментарии</span></td>
               </tr>
           </table>
         </div>
@@ -345,6 +345,23 @@
         </div>
       </div>
     </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__btn');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
   </body>
 </html>

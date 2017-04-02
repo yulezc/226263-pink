@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="main-nav  main-nav--opened">
+      <div class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="page-header__menu">
             <div class="page-header__menu-wrapper">
@@ -64,7 +64,7 @@
                   </svg>
                 </a>
               </div>
-              <button class="main-nav__btn-open" type="button">Открыть меню</button>
+              <button class="main-nav__btn" type="button">Открыть меню</button>
             </div>
           </div>
           <ul class="main-nav__items">
@@ -135,10 +135,12 @@
             <div class="form-field__user-item">
               <label for="phone">номер телефона</label>
               <input class="form-field__tel" type="tel" name="tel" id="phone" placeholder="Номер, пожалуйста">
+              <span class="form-field__tel-icon"></span>
             </div>
             <div class="form-field__user-item">
               <label for="email">адрес почты</label>
               <input class="form-field__email" type="email" name="email" id="email" placeholder="Введите почту*" required>
+              <span class="form-field__email-icon"></span>
             </div>
         </div>
         </fieldset>
@@ -169,7 +171,7 @@
 
         <div class="form-field__footer">
           <input class="form-field__bnt  btn" type="submit" value="Отправить форму">
-          <p class="form-field__note"><sup>*</sup> — обязательные <span class="form-field__note-hidden"> для заполнения</span> поля</p>
+          <p class="form-field__note"><sup class="form-field__sup">*</sup> — обязательные <span class="form-field__note-hidden"> для заполнения</span> поля</p>
         </div>
       </form>
     </main>
@@ -273,5 +275,23 @@
       </p>
         <button class="pop-up__bnt  btn" type="button">ок</button>
     </div>
+
+      <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__btn');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
+
   </body>
 </html>

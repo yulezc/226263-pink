@@ -64,11 +64,51 @@
   opacity: 0;
 }
 
+.price__hit {
+  position: relative;
+  background: url("../img/bg-hit.svg") no-repeat top left;
+
+  &::before {
+    content: "хит";
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    font-size: 14px;
+    line-height: 30px;
+    transform: rotate(-45deg);
+  }
+}
+
+.price__check-on,
+.price__check-off {
+  position: relative;
+
+}
+
+.price__check-on::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: #ffffff url("../img/icon-yes.svg") no-repeat center;
+}
+
+.price__check-off::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  background: #ffffff url("../img/icon-no.svg") no-repeat center;
+}
 
 @media @mobile-widths-only {
 
   .price__wrapper {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 95px;
   }
 
@@ -124,7 +164,7 @@
   }
 
   .price__wrapper {
-    padding-top: 63px;
+    padding-top: 100px;
     padding-bottom: 70px;
   }
 
@@ -152,6 +192,16 @@
     padding: 0;
   }
 
+  .price__check-on::before {
+    top: 5px;
+    right: 55px;
+  }
+
+  .price__check-off::before {
+    top: 5px;
+    right: 55px;
+  }
+
   .price__cost {
     font-size: 18px;
   }
@@ -160,8 +210,18 @@
 @media @desktop-widths {
 
   .price__wrapper {
-    padding-top: 125px;
+    padding-top: 155px;
     padding-bottom: 90px;
+  }
+
+  .price__check-on::before {
+    top: 10px;
+    right: 100px;
+  }
+
+  .price__check-off::before {
+    top: 10px;
+    right: 100px;
   }
 
   .price__table {
