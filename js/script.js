@@ -14,25 +14,25 @@ navToggle.addEventListener("click", function() {
 });
 
 ymaps.ready(function () {
-    var myMap = new ymaps.Map("map", {
-            center: [59.9389231, 30.323055],
-            zoom: 15
-        }, {
-            searchControlProvider: "yandex#search"
-        }),
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: "Собственный значок метки",
-            balloonContent: "метка Pink"
-        }, {
+  var myMap = new ymaps.Map("map", {
+          center: [59.9389231, 30.323055],
+          zoom: 15
+      }, {
+          searchControlProvider: "yandex#search"
+      }),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: "Собственный значок метки",
+          balloonContent: "метка Pink"
+      }, {
 
-            iconLayout: "default#image",
+          iconLayout: "default#image",
 
-            iconImageHref: "img/icon-map-marker.svg",
+          iconImageHref: "img/icon-map-marker.svg",
 
-            iconImageSize: [36, 36],
+          iconImageSize: [36, 36],
 
-            iconImageOffset: [-5, -38]
-        });
+          iconImageOffset: [-5, -38]
+      });
 
-    myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark);
 });
