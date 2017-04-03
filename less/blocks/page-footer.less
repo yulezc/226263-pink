@@ -3,16 +3,6 @@
   background-color: #ffffff;
   font-size: 18px;
   line-height: 30px;
-
-  span {
-    color: @color-pink;
-    font-weight: 300;
-    font-size: 24px;
-  }
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .page-footer__top {
@@ -34,6 +24,31 @@
   width: 245px;
   text-align: center;
   margin: 5px 20px 10px 20px;
+
+  span {
+    color: @color-pink;
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.page-footer__email span {
+
+  &:hover {
+    color: @color-blue;
+  }
+
+  &:active {
+    color: #bec2c7;
+  }
+}
+
+.page-footer__adress {
+  margin-bottom: 0;
 }
 
 .social-links {
@@ -111,10 +126,10 @@
 @media @mobile-widths-only {
 
   .page-footer__top {
-    padding-top: 25px;
+    padding-top: 18px;
   }
 
-  .page-footer__bottom.page-footer__bottom-index {
+  .page-footer__bottom.page-footer__bottom--index {
     display: none;
   }
 
@@ -134,15 +149,23 @@
   .page-footer__top {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
   }
 
-  .page-footer__contacts {
-    margin: 0px 20px 40px 20px;
+  .page-footer__tel {
+    width: 230px;
+    margin: 5px 30px 10px 35px;
+  }
+
+  .page-footer__email {
+    margin: 5px 25px 10px 40px;
+  }
+
+  .page-footer__adress {
+    margin: 30px 80px 30px 190px;
   }
 
   .page-footer__title {
-    margin: 40px auto;
+    margin: 43px 100px 35px 125px;
     font-size: 40px;
     line-height: 50px;
   }
@@ -179,15 +202,30 @@
     }
   }
 
+  .page-footer__social {
+    margin-top: 10px
+  }
+
+  .page-footer__contacts {
+    width: 245px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+  }
+
   .page-footer__title {
     font-size: 50px;
     line-height: 60px;
-    margin: 45px 200px 55px 200px;
+    margin: 50px 200px 50px 200px;
   }
 
   .page-footer__email {
     order: 1;
   }
+
+ .page-footer__tel {
+    width: 230px;
+  }
+
 
   .page-footer__contacts {
     span {
@@ -196,12 +234,20 @@
     }
   }
 
+  .page-footer__copyright {
+    width: 150px;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 0 15px 0;
+    margin-top: 10px
+  }
+
   .page-footer__bottom {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 70px;
   }
 
-  .page-footer__bottom-index {
-    padding-top: 70px;
+  .page-footer__bottom--index {
+    padding-top: 55px;
   }
 }

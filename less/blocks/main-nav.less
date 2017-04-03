@@ -84,13 +84,13 @@
               0 16px 0 0 #ffffff;
 }
 
-.main-nav__btn:hover::before {
+.main-nav--closed .main-nav__btn:hover::before {
   background-color: @color-pink;
   box-shadow: 0 8px 0 0 @color-pink,
               0 16px 0 0 @color-pink;
 }
 
-.main-nav__btn:active::before {
+.main-nav--closed .main-nav__btn:active::before {
   background-color: rgba(210, 40, 86, 0.3);
   box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3),
               0 16px 0 0 rgba(210, 40, 86, 0.3);
@@ -98,15 +98,15 @@
 
 .main-nav--opened .main-nav__btn {
   top: 0;
-  right: 0;
+  right: 13px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 27px;
-    right: 27px;
-    width: 25px;
+    top: 33px;
+    right: 0px;
+    width: 30px;
     height: 4px;
     background-color: #ffffff;
   }
@@ -121,7 +121,18 @@
   }
 }
 
+.main-nav--opened .main-nav__btn:hover::before,
+.main-nav--opened .main-nav__btn:hover::after {
+  background-color: @color-pink;
+}
+
+.main-nav--opened .main-nav__btn:active::before,
+.main-nav--opened .main-nav__btn:active::after {
+  background-color: rgba(210, 40, 86, 0.3);
+}
+
 @media @mobile-widths-only {
+
   .main-nav__item {
     border-top: 1px solid #485461;
     border-bottom: 1px solid #000000;
@@ -136,11 +147,14 @@
     border-bottom: 1px solid #000000;
   }
 
-  .main-nav__btn,
-  .main-nav--opened .main-nav__btn {
+  .main-nav__btn {
     top: 20px;
   }
 
+  .main-nav--opened .main-nav__btn {
+    top: 20px;
+    right: 0px;
+  }
 }
 
 @media @desktop-widths {
