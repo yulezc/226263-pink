@@ -35,6 +35,11 @@
   margin-right: 10px;
 }
 
+.btn-prev,
+.btn-next {
+  display: none;
+}
+
 .reviews__item {
   display: none;
   text-align: center;
@@ -54,7 +59,16 @@
   background-color: #ffffff;
 }
 
+.reviews__slider-toggles label:hover {
+  background-color: #7e868f;
+}
+
+.reviews__slider-toggles label:disabled {
+  background-color: #e9ebec;
+}
+
 @media @mobile-widths-only {
+
   .reviews__item {
     line-height: 30px;
   }
@@ -70,7 +84,8 @@
   }
 
   .reviews__slider {
-    padding-bottom: 90px;
+    padding-top: 25px;
+    padding-bottom: 76px;
   }
 
   .reviews__item-name {
@@ -88,8 +103,8 @@
 @media @tablet-widths {
 
   .reviews__slider {
-    padding-top: 105px;
-    padding-bottom: 105px;
+    padding-top: 125px;
+    padding-bottom: 40px;
   }
 
   .reviews__item-content{
@@ -103,8 +118,8 @@
   }
 
   .reviews__item-name {
-    font-size: 18px;
-    margin-top: 30px;
+    font-size: 20px;
+    margin-top: 35px;
     margin-bottom: 0;
     font-weight: bold;
     order: 1;
@@ -117,15 +132,15 @@
   }
 
   .reviews__slider-toggles {
-    bottom: 80px;
-    left: 270px;
+    bottom: 17px;
+    left: 275px;
   }
 }
 
 @media @desktop-widths {
 
   .reviews__slider {
-    padding: 160px 80px 90px 80px;
+    padding: 185px 80px 10px 80px;
   }
 
   .reviews__item-name {
@@ -139,5 +154,43 @@
 
   .reviews__slider-toggles {
     display: none;
+  }
+
+  .reviews__slider::before {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 68px;
+    top: 70px;
+    left: 430px;
+    background: url("../img/icon-quotes.svg") no-repeat center;
+  }
+
+  .btn-prev {
+    display: block;
+    position: absolute;
+    top: 210px;
+    left: 0px;
+    width: 20px;
+    height: 45px;
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url("../img/icon-review-arrow-left.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .btn-next {
+    display: block;
+    position: absolute;
+    top: 210px;
+    right: 0px;
+    width: 22px;
+    height: 45px;
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url("../img/icon-review-arrow-right.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
 }

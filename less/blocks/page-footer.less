@@ -1,16 +1,8 @@
-.page-footer {
+.page-footer__wrapper {
   .container();
   background-color: #ffffff;
   font-size: 18px;
   line-height: 30px;
-  span {
-    color: @color-pink;
-    font-weight: 300;
-    font-size: 24px;
-  }
-  a {
-    text-decoration: none;
-  }
 }
 
 .page-footer__top {
@@ -21,12 +13,6 @@
   align-items: center;
 }
 
-.social-links,
-.social-link {
-  padding: 0;
-  margin: 0;
-}
-
 .page-footer__title {
   font-weight: 300;
   font-size: 24px;
@@ -34,44 +20,116 @@
   text-align: center;
 }
 
-.social-links li {
-  list-style: none;
-}
-
 .page-footer__contacts {
   width: 245px;
   text-align: center;
   margin: 5px 20px 10px 20px;
+
+  span {
+    color: @color-pink;
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.page-footer__email span {
+
+  &:hover {
+    color: @color-blue;
+  }
+
+  &:active {
+    color: #bec2c7;
+  }
+}
+
+.page-footer__adress {
+  margin-bottom: 0;
 }
 
 .social-links {
   display: flex;
-  width: 180px;
   justify-content: space-between;
+  height: 50px;
+  width: 176px;
 }
 
 .social-link {
-  display: block;
   position: relative;
   width: 45px;
   height: 45px;
-  font-size: 0;
   border: 3px solid #e9ebec;
   border-radius: 50%;
-  img {
+
+  svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    fill: @color-pink;
+  }
+
+  &:hover {
+    border-color: @color-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+    border-color: #e9ebec;
+  }
+}
+
+.page-footer__copyright {
+  position: relative;
+  width: 130px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: @color-blue;
+
+  svg {
+    height: 33px;
+    width: 27px;
+    fill: @color-pink;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  &:hover svg {
+    fill: @color-blue;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo {
+
+  &-desktop {
+    display: none;
+  }
+
+  &:hover path {
+    fill: @color-pink;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }
 
 @media @mobile-widths-only {
+
   .page-footer__top {
-    padding-top: 25px;
+    padding-top: 18px;
   }
 
-  .page-footer__bottom.page-footer__bottom-index {
+  .page-footer__bottom.page-footer__bottom--index {
     display: none;
   }
 
@@ -87,18 +145,27 @@
 }
 
 @media @tablet-widths {
+
   .page-footer__top {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
   }
 
-  .page-footer__contacts {
-    margin: 0px 20px 40px 20px;
+  .page-footer__tel {
+    width: 230px;
+    margin: 5px 30px 10px 35px;
+  }
+
+  .page-footer__email {
+    margin: 5px 25px 10px 40px;
+  }
+
+  .page-footer__adress {
+    margin: 30px 80px 30px 190px;
   }
 
   .page-footer__title {
-    margin: 40px auto;
+    margin: 43px 100px 35px 125px;
     font-size: 40px;
     line-height: 50px;
   }
@@ -108,12 +175,14 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
 @media @desktop-widths {
+
   .page-footer__top {
     flex-wrap: wrap;
     align-items: baseline;
@@ -122,14 +191,39 @@
     padding-bottom: 5px;
   }
 
+  .page-footer__logo {
+
+    &-mobile {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+    }
+  }
+
+  .page-footer__social {
+    margin-top: 10px
+  }
+
+  .page-footer__contacts {
+    width: 245px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+  }
+
   .page-footer__title {
     font-size: 50px;
     line-height: 60px;
-    margin: 45px 200px 55px 200px;
+    margin: 50px 200px 50px 200px;
   }
 
   .page-footer__email {
     order: 1;
+  }
+
+  .page-footer__tel {
+    width: 230px;
   }
 
   .page-footer__contacts {
@@ -139,12 +233,20 @@
     }
   }
 
+  .page-footer__copyright {
+    width: 150px;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 0 15px 0;
+    margin-top: 10px
+  }
+
   .page-footer__bottom {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 70px;
   }
 
-  .page-footer__bottom-index {
-    padding-top: 70px;
+  .page-footer__bottom--index {
+    padding-top: 55px;
   }
 }

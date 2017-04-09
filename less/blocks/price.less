@@ -1,4 +1,8 @@
 .price {
+  background: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center -2px;
+  background-size: contain;
   background-color: @color-grey;
 }
 
@@ -7,16 +11,19 @@
 }
 
 .price {
+
   line-height: 30px;
+
   th {
     font-weight: bold;
     font-size: 18px;
     background-color: @color-blue;
     color: #ffffff;
-    padding: 15px 50px 20px 40px;
+    padding: 15px 50px 20px 45px;
     text-transform: uppercase;
     border: 2px solid @color-grey;
   }
+
   td:not(.price__row-hidden) {
     border: 2px solid #e5e5e5;
   }
@@ -57,11 +64,52 @@
   opacity: 0;
 }
 
+.price__hit {
+  position: relative;
+  background: url("../img/bg-hit.svg") no-repeat top left;
+
+  &::before {
+    content: "хит";
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    font-size: 14px;
+    line-height: 30px;
+    transform: rotate(-45deg);
+  }
+}
+
+.price__check-on,
+.price__check-off {
+  position: relative;
+
+}
+
+.price__check-on::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: #ffffff url("../img/icon-yes.svg") no-repeat center;
+}
+
+.price__check-off::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  background: #ffffff url("../img/icon-no.svg") no-repeat center;
+}
 
 @media @mobile-widths-only {
+
   .price__wrapper {
-    padding-top: 55px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 95px;
   }
 
   .price__column-0,
@@ -76,7 +124,7 @@
 
   .price-slider__toggles {
     position: absolute;
-    bottom: 50px;
+    bottom: 55px;
     left: 126px;
     width: 70px;
     height: 12px;
@@ -105,17 +153,31 @@
 }
 
 @media @tablet-widths {
+
   .price {
     line-height: 30px;
+
     th {
       font-size: 16px;
-      padding: 10px 35px 10px 35px;
+      padding: 15px 35px 5px 35px;
     }
   }
 
   .price__wrapper {
-    padding-top: 7px;
+    padding-top: 95px;
     padding-bottom: 70px;
+  }
+
+  .price__hit {
+    background: url("../img/bg-hit-tablet.svg") no-repeat top left;
+
+    &::before {
+      top: 6px;
+      left: 6px;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: normal;
+    }
   }
 
   .price__row {
@@ -139,7 +201,17 @@
   .price__column-2,
   .price__column-3 {
     width: 82px;
-    padding: 0;
+    padding: 0px;
+  }
+
+  .price__check-on::before {
+    top: 5px;
+    right: 55px;
+  }
+
+  .price__check-off::before {
+    top: 5px;
+    right: 55px;
   }
 
   .price__cost {
@@ -148,9 +220,20 @@
 }
 
 @media @desktop-widths {
+
   .price__wrapper {
-    padding-top: 50px;
+    padding-top: 155px;
     padding-bottom: 90px;
+  }
+
+  .price__check-on::before {
+    top: 10px;
+    right: 100px;
+  }
+
+  .price__check-off::before {
+    top: 10px;
+    right: 100px;
   }
 
   .price__table {
